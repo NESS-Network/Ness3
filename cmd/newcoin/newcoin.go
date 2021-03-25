@@ -13,7 +13,7 @@ import (
 
 	"github.com/urfave/cli"
 
-	"github.com/ness-network/ness3/src/mdl"
+	"github.com/ness-network/ness3/src/ness3"
 	"github.com/ness-network/ness3/src/util/logging"
 	"github.com/ness-network/ness3/src/util/useragent"
 )
@@ -58,7 +58,7 @@ func createCoinCommand() cli.Command {
 			cli.StringFlag{
 				Name:  "coin",
 				Usage: "name of the coin to create",
-				Value: "mdl",
+				Value: "ness3",
 			},
 			cli.StringFlag{
 				Name:  "template-dir, td",

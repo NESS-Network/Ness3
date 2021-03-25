@@ -14,7 +14,7 @@ GOLDFLAGS="${GOLDFLAGS} -X main.Commit=${COMMIT} -X main.Branch=${BRANCH}"
 
 GORUNFLAGS=${GORUNFLAGS:-}
 
-go run -ldflags "${GOLDFLAGS}" $GORUNFLAGS cmd/ness3/ness3.go \
+go run -ldflags "${GOLDFLAGS}" $GORUNFLAGS ./cmd/ness3/ness3.go \
     -gui-dir="${DIR}/src/gui/static/" \
     -max-default-peer-outgoing-connections=7 \
     -launch-browser=true \

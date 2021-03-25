@@ -101,7 +101,7 @@ includes_DragonFly='
 '
 
 includes_FreeBSD='
-#include <sys/capsicum.h>
+#include <sys/capability.h>
 #include <sys/param.h>
 #include <sys/types.h>
 #include <sys/event.h>
@@ -197,7 +197,6 @@ struct ltchars {
 #include <linux/keyctl.h>
 #include <linux/magic.h>
 #include <linux/memfd.h>
-#include <linux/module.h>
 #include <linux/netfilter/nfnetlink.h>
 #include <linux/netlink.h>
 #include <linux/net_namespace.h>
@@ -450,7 +449,6 @@ ccflags="$@"
 		$2 ~ /^KEXEC_/ ||
 		$2 ~ /^LINUX_REBOOT_CMD_/ ||
 		$2 ~ /^LINUX_REBOOT_MAGIC[12]$/ ||
-		$2 ~ /^MODULE_INIT_/ ||
 		$2 !~ "NLA_TYPE_MASK" &&
 		$2 ~ /^(NETLINK|NLM|NLMSG|NLA|IFA|IFAN|RT|RTC|RTCF|RTN|RTPROT|RTNH|ARPHRD|ETH_P|NETNSA)_/ ||
 		$2 ~ /^SIOC/ ||
