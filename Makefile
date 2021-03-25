@@ -11,15 +11,18 @@
 .PHONY: generate update-golden-files
 .PHONY: fuzz-base58 fuzz-encoder
 
-COIN ?= mdl
-
+COIN ?= ness3
+WALLET_DIR=/root/.ness3/wallets
+WALLET_NAME=ness_cli.wlt
+DATA_DIR=/root/.ness3
+COIN=ness3
 # Static files directory
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 GUI_STATIC_DIR = src/gui/static
 
-PORT="8320"
-RPC_PORT="8330"
+PORT="6422"
+RPC_PORT="6422"
 
 IP_ADDR="127.0.0.1"
 
@@ -79,7 +82,7 @@ run-daemon:  ## Run mdl with server daemon configuration. To add arguments, do '
 	./run-daemon.sh ${ARGS}
 
 run:  ## Run the MDL node. To add arguments, do 'make ARGS="--foo" run'.
-	go run cmd/mdl/mdl.go \
+	go run cmd/ness3/ness3.go \
 	    -web-interface=true \
         -web-interface-addr=${IP_ADDR} \
         -web-interface-port=${PORT} \
@@ -93,8 +96,8 @@ run:  ## Run the MDL node. To add arguments, do 'make ARGS="--foo" run'.
         -disable-csrf=false \
         $@
 
-run-help: ## Show MDL node help
-	@go run cmd/mdl/mdl.go --help
+run-help: ## Show Ness3 node help
+	@go run cmd/ness3/ness3.go --help
 
 run-integration-test-live: ## Run the mdl node configured for live integration tests
 	./ci-scripts/run-live-integration-test-node.sh
@@ -102,7 +105,7 @@ run-integration-test-live: ## Run the mdl node configured for live integration t
 run-integration-test-live-cover: ## Run the mdl node configured for live integration tests with coverage
 	./ci-scripts/run-live-integration-test-node-cover.sh
 
-test: ## Run tests for MDL
+test: ## Run tests for NESS3
 	@mkdir -p coverage/
 	COIN=$(COIN) go test -coverpkg="github.com/MDLLife/MDL/..." -coverprofile=coverage/go-test-cmd.coverage.out -timeout=5m ./cmd/...
 	COIN=$(COIN) go test -coverpkg="github.com/MDLLife/MDL/..." -coverprofile=coverage/go-test-src.coverage.out -timeout=5m ./src/...

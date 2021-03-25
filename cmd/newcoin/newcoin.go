@@ -13,9 +13,9 @@ import (
 
 	"github.com/urfave/cli"
 
-	"github.com/MDLlife/MDL/src/mdl"
-	"github.com/MDLlife/MDL/src/util/logging"
-	"github.com/MDLlife/MDL/src/util/useragent"
+	"github.com/ness-network/ness3/src/mdl"
+	"github.com/ness-network/ness3/src/util/logging"
+	"github.com/ness-network/ness3/src/util/useragent"
 )
 
 const (

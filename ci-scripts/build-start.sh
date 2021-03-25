@@ -10,7 +10,7 @@ RPC_ADDR="$IP_ADDR:$RPC_PORT"
 MODE="stable"
 MODE_LIVE="live"
 
-BINARY="$PWD/mdl-integration"
+BINARY="$PWD/ness3-integration"
 TEST=""
 UPDATE=""
 

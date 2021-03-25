@@ -2,4 +2,4 @@
 
 set -e -o pipefail
 
-go build -o $GOPATH/bin/mdl-cli .
+go build -o $GOPATH/bin/cli .

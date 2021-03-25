@@ -38,7 +38,7 @@ done
 
 set -euxo pipefail
 
-DATA_DIR=$(mktemp -d -t mdl-data-dir.XXXXXX)
+DATA_DIR=$(mktemp -d -t ness3-data-dir.XXXXXX)
 WALLET_DIR="${DATA_DIR}/wallets"
 
 if [[ ! "$DATA_DIR" ]]; then
@@ -46,20 +46,20 @@ if [[ ! "$DATA_DIR" ]]; then
   exit 1
 fi
 
-# Compile the mdl node
+# Compile the ness3 node
 # We can't use "go run" because this creates two processes which doesn't allow us to kill it at the end
 echo "compiling mdl"
-go build -o "$BINARY" $PWD/cmd/mdl/mdl.go
+go build -o "$BINARY" $PWD/cmd/ness3/ness3.go
 
-# Run mdl node with pinned blockchain database
+# Run ness3 node with pinned blockchain database
 echo "starting mdl ($PWD/mdl-integration) node in background with http listener on $HOST"
 
 $PWD/mdl-integration -disable-networking=true \
-                      -genesis-signature eb10468d10054d15f2b6f8946cd46797779aa20a7617ceb4be884189f219bc9a164e56a5b9f7bec392a804ff3740210348d73db77a37adb542a8e08d429ac92700 \
-                      -genesis-address 2jBbGxZRGoQG1mqhPBnXnLTxK6oxsTf8os6 \
-                      -blockchain-public-key 0328c576d3f420e7682058a981173a4b374c7cc5ff55bf394d3cf57059bbe6456a \
+                      -genesis-signature 05d4045854103f8a8938bb701cc4101c38942a180ba02d328d6f880bf37b387c47e95813d061f94bdf5d894bfebf17f933c5fc92fc9d010480765257c3d19d9b00 \
+                      -genesis-address 24GJTLPMoz61sV4J4qg1n14x5qqDwXqyJJy \
+                      -blockchain-public-key 02933015bd2fa1e0a885c05fb08eb7c647bf8c3188ed5120b51d0d09ccaf525036 \
                       -db-path=./src/api/integration/testdata/blockchain-180.db \
-                      -peerlist-url https://downloads.skycoin.net/blockchain/peers.txt
+                      -peerlist-url https://nodes.privateness.network/blockchain/peers.txt
                       -web-interface-addr=$IP_ADDR \
                       -web-interface-port=$PORT \
                       -download-peerlist=false \
@@ -106,9 +106,9 @@ CLI_FAIL_LIVE=$?
 fi
 
 
-echo "shutting down mdl node"
+echo "shutting down ness3 node"
 
-# Shutdown mdl node
+# Shutdown ness3 node
 kill -9 $MDL_PID
 wait $MDL_PID
 

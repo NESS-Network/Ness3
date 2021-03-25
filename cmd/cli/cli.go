@@ -7,7 +7,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/MDLlife/MDL/src/cli"
+	"github.com/ness-network/ness3/src/cli"
 )
 
 func main() {

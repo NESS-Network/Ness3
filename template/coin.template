@@ -13,14 +13,14 @@ import (
 	_ "net/http/pprof"
 	"os"
 
-	"github.com/MDLlife/MDL/src/readable"
-	"github.com/MDLlife/MDL/src/mdl"
-	"github.com/MDLlife/MDL/src/util/logging"
+	"github.com/ness-network/ness3/src/readable"
+	"github.com/ness-network/ness3/src/ness3"
+	"github.com/ness-network/ness3/src/util/logging"
 )
 
 var (
 	// Version of the node. Can be set by -ldflags
-	Version = "0.26.0"
+	Version = "0.27.1"
 	// Commit ID. Can be set by -ldflags
 	Commit = ""
 	// Branch name. Can be set by -ldflags

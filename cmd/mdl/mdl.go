@@ -13,14 +13,14 @@ import (
 	_ "net/http/pprof"
 	"os"
 
-	"github.com/MDLlife/MDL/src/mdl"
-	"github.com/MDLlife/MDL/src/readable"
-	"github.com/MDLlife/MDL/src/util/logging"
+	"github.com/ness-network/ness3/src/readable"
+	"github.com/ness-network/ness3/src/ness3"
+	"github.com/ness-network/ness3/src/util/logging"
 )
 
 var (
 	// Version of the node. Can be set by -ldflags
-	Version = "0.26.0"
+	Version = "0.27.1"
 	// Commit ID. Can be set by -ldflags
 	Commit = ""
 	// Branch name. Can be set by -ldflags
@@ -36,39 +36,40 @@ var (
 	CoinName = "mdl"
 
 	// GenesisSignatureStr hex string of genesis signature
-	GenesisSignatureStr = "97f68c5564c8526a77a26c54e48c005c18ee76a92a7d0ee397a2e3bd25e5c74a1630952716f3281362f8b2baf22139282ab6b2f3d0e5ee825a69690e76d4401e00"
+	GenesisSignatureStr = "05d4045854103f8a8938bb701cc4101c38942a180ba02d328d6f880bf37b387c47e95813d061f94bdf5d894bfebf17f933c5fc92fc9d010480765257c3d19d9b00"
 	// GenesisAddressStr genesis address string
-	GenesisAddressStr = "zVebXKCqbtGJMnEoGdFkewvUN5KMryrRTc"
+	GenesisAddressStr = "24GJTLPMoz61sV4J4qg1n14x5qqDwXqyJJy"
 	// BlockchainPubkeyStr pubic key string
-	BlockchainPubkeyStr = "025d096499390a1924969f0991b1e0fd5f37c9ec54f7830f10fa8d911a51bb1e4b"
+	BlockchainPubkeyStr = "02933015bd2fa1e0a885c05fb08eb7c647bf8c3188ed5120b51d0d09ccaf525036"
 	// BlockchainSeckeyStr empty private key string
 	BlockchainSeckeyStr = ""
 
 	// GenesisTimestamp genesis block create unix time
-	GenesisTimestamp uint64 = 1516848705
+	GenesisTimestamp uint64 = 1426562704
 	// GenesisCoinVolume represents the coin capacity
-	GenesisCoinVolume uint64 = 1000e12
+	GenesisCoinVolume uint64 = 200000000000000
 
 	// DefaultConnections the default trust node addresses
 	DefaultConnections = []string{
-		"76.74.178.136:7800",
-		"68.183.177.154:7800",
-		"128.199.148.6:7800",
+		"192.243.100.192:6660",
+		"167.114.97.165:6660",
+		"198.100.144.39:6660",
+		"94.23.56.111:6660",
 	}
 
 	nodeConfig = mdl.NewNodeConfig(ConfigMode, mdl.NodeParameters{
-		CoinName:            CoinName,
-		GenesisSignatureStr: GenesisSignatureStr,
-		GenesisAddressStr:   GenesisAddressStr,
-		GenesisCoinVolume:   GenesisCoinVolume,
-		GenesisTimestamp:    GenesisTimestamp,
-		BlockchainPubkeyStr: BlockchainPubkeyStr,
-		BlockchainSeckeyStr: BlockchainSeckeyStr,
-		DefaultConnections:  DefaultConnections,
-		PeerListURL:         "",
-		Port:                7800,
-		WebInterfacePort:    8320,
-		DataDirectory:       "$HOME/.mdl",
+		CoinName:                       CoinName,
+		GenesisSignatureStr:            GenesisSignatureStr,
+		GenesisAddressStr:              GenesisAddressStr,
+		GenesisCoinVolume:              GenesisCoinVolume,
+		GenesisTimestamp:               GenesisTimestamp,
+		BlockchainPubkeyStr:            BlockchainPubkeyStr,
+		BlockchainSeckeyStr:            BlockchainSeckeyStr,
+		DefaultConnections:             DefaultConnections,
+		PeerListURL:                    "http://nodes.privateness.network/blockchain/peers.txt",
+		Port:                           6660,
+		WebInterfacePort:               8330,
+		DataDirectory:                  "$HOME/.mdl",
 	})
 
 	parseFlags = true

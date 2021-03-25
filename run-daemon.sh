@@ -1,23 +1,28 @@
 #!/usr/bin/env bash
 
-# Runs mdl in daemon mode configuration
+# Runs Privateness in server daemon configuration
 
 set -x
 
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-echo "mdl binary dir:" "$DIR"
+echo "Ness binary dir:" "$DIR"
 pushd "$DIR" >/dev/null
 
 COMMIT=$(git rev-parse HEAD)
 BRANCH=$(git rev-parse --abbrev-ref HEAD)
-GOLDFLAGS="-X main.Commit=${COMMIT} -X main.Branch=${BRANCH}"
+GOLDFLAGS="${GOLDFLAGS} -X main.Commit=${COMMIT} -X main.Branch=${BRANCH}"
 
 GORUNFLAGS=${GORUNFLAGS:-}
-
-go run -ldflags "${GOLDFLAGS}" $GORUNFLAGS cmd/mdl/mdl.go \
+export USER_BURN_FACTOR=5
+go run -ldflags "${GOLDFLAGS}" $GORUNFLAGS cmd/ness3/ness3.go \
+    -gui-dir="${DIR}/src/gui/static/" \
+    -max-default-peer-outgoing-connections=7 \
+    -launch-browser=true \
+    -enable-all-api-sets=true \
     -enable-gui=false \
-    -launch-browser=false \
-    -log-level=error \
+    -log-level=debug \
+    -disable-csrf \
+    -disable-csp \
     $@
 
 popd >/dev/null
