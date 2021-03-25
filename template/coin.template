@@ -1,5 +1,5 @@
 /*
-mdl daemon
+ness daemon
 */
 package main
 
@@ -13,9 +13,9 @@ import (
 	_ "net/http/pprof"
 	"os"
 
-	"github.com/ness-network/ness3/src/readable"
-	"github.com/ness-network/ness3/src/ness3"
-	"github.com/ness-network/ness3/src/util/logging"
+	"github.com/MDLlife/MDL/src/readable"
+	"github.com/MDLlife/MDL/src/ness3"
+	"github.com/MDLlife/MDL/src/util/logging"
 )
 
 var (

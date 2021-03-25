@@ -44,9 +44,13 @@ require (
 	github.com/stretchr/testify v1.3.0
 	github.com/toqueteos/webbrowser v1.1.0
 	github.com/urfave/cli v1.20.0
-	golang.org/x/crypto v0.0.0-20181015023909-0c41d7ab0a0e
-	golang.org/x/net v0.0.0-20181114220301-adae6a3d119a
-	golang.org/x/sys v0.0.0-20181116152217-5ac8a444bdc5
-	golang.org/x/text v0.3.0
+	github.com/yuin/goldmark v1.3.3 // indirect
+	golang.org/x/crypto v0.0.0-20200622213623-75b288015ac9
+	golang.org/x/mod v0.4.2 // indirect
+	golang.org/x/net v0.0.0-20210324205630-d1beb07c2056
+	golang.org/x/sync v0.0.0-20210220032951-036812b2e83c // indirect
+	golang.org/x/sys v0.0.0-20210324051608-47abb6519492
+	golang.org/x/text v0.3.3
+	golang.org/x/tools v0.1.0 // indirect
 	gopkg.in/yaml.v2 v2.2.1
 )
