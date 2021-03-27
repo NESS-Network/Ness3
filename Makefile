@@ -21,8 +21,8 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 GUI_STATIC_DIR = src/gui/static
 
-PORT="6422"
-RPC_PORT="6422"
+PORT="6420"
+RPC_PORT="6420"
 
 IP_ADDR="127.0.0.1"
 
@@ -169,8 +169,8 @@ lint: ## Run linters. Use make install-linters first.
 
 
 check-newcoin: newcoin ## Check that make newcoin succeeds and no templated files are changed.
-	@if [ "$(shell git diff ./cmd/mdl/mdl.go | wc -l | tr -d ' ')" != "0" ] ; then echo 'Changes detected after make newcoin' ; exit 2 ; fi
-	@if [ "$(shell git diff ./cmd/mdl/mdl_test.go | wc -l | tr -d ' ')" != "0" ] ; then echo 'Changes detected after make newcoin' ; exit 2 ; fi
+	@if [ "$(shell git diff ./cmd/ness3/ness3.go | wc -l | tr -d ' ')" != "0" ] ; then echo 'Changes detected after make newcoin' ; exit 2 ; fi
+	@if [ "$(shell git diff ./cmd/ness3/ness3_test.go | wc -l | tr -d ' ')" != "0" ] ; then echo 'Changes detected after make newcoin' ; exit 2 ; fi
 	@if [ "$(shell git diff ./src/params/params.go | wc -l | tr -d ' ')" != "0" ] ; then echo 'Changes detected after make newcoin' ; exit 2 ; fi
 
 check: lint clean-coverage test test-386 \
