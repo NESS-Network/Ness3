@@ -8,8 +8,8 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/MDLlife/MDL/src/testutil"
-	"github.com/MDLlife/MDL/src/util/file"
+	"github.com/ness-network/ness3/src/testutil"
+	"github.com/ness-network/ness3/src/util/file"
 )
 
 func Example() {
@@ -44,7 +44,7 @@ func TestLoadConfig(t *testing.T) {
 	})
 
 	t.Run("set RPC_ADDR", func(t *testing.T) {
-		val := "http://111.22.33.44:5555"
+		val := "http://127.0.0.1:5555"
 		os.Setenv("RPC_ADDR", val)
 		defer os.Unsetenv("RPC_ADDR")
 
@@ -54,7 +54,7 @@ func TestLoadConfig(t *testing.T) {
 	})
 
 	t.Run("set RPC_ADDR invalid", func(t *testing.T) {
-		val := "111.22.33.44:5555"
+		val := "127.0.0.1:5555"
 		os.Setenv("RPC_ADDR", val)
 		defer os.Unsetenv("RPC_ADDR")
 

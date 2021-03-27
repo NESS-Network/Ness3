@@ -21,7 +21,7 @@ The minimal requirements for the cli are
 - minimum of 3 unspents in the wallet // this requirement is not checked right now
 */
 
-const cliName = "mdl-cli"
+const cliName = "cli"
 
 var (
 	cliOut    []byte

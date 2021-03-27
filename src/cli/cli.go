@@ -22,8 +22,8 @@ import (
 
 	"golang.org/x/crypto/ssh/terminal"
 
-	"github.com/MDLlife/MDL/src/api"
-	"github.com/MDLlife/MDL/src/util/file"
+	"github.com/ness-network/ness3/src/api"
+	"github.com/ness-network/ness3/src/util/file"
 )
 
 var (
@@ -33,7 +33,7 @@ var (
 
 const (
 	walletExt         = ".wlt"
-	defaultCoin       = "mdl"
+	defaultCoin       = "ness3"
 	defaultWalletName = "$COIN_cli" + walletExt
 	defaultWalletDir  = "$DATA_DIR/wallets"
 	defaultRPCAddress = "http://127.0.0.1:8330"

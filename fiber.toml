@@ -17,7 +17,7 @@ default_connections = [
 ]
 peer_list_url = "http://nodes.privateness.network/blockchain/peers.txt"
 port = 6660
-web_interface_port = 8330
+web_interface_port = 6420
 web_interface_addr = "127.0.0.1"
 # unconfirmed_burn_factor = 10
 # unconfirmed_max_transaction_size = 32 * 1024

@@ -10,12 +10,12 @@ import (
 func versionCmd() *cobra.Command {
 	versionCmd := &cobra.Command{
 		Use:          "version",
-		Short:        "List the current version of MDL components",
+		Short:        "List the current version of NESS3 components",
 		Args:         cobra.NoArgs,
 		SilenceUsage: true,
 		RunE: func(c *cobra.Command, _ []string) error {
 			var ver = struct {
-				MDL    string `json:"mdl"`
+				MDL    string `json:"ness3"`
 				Cli    string `json:"cli"`
 				RPC    string `json:"rpc"`
 				Wallet string `json:"wallet"`

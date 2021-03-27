@@ -1,5 +1,5 @@
 /*
-mdl daemon
+ness
 */
 package main
 
@@ -13,9 +13,9 @@ import (
 	_ "net/http/pprof"
 	"os"
 
-	"github.com/ness-network/ness3/src/readable"
-	"github.com/ness-network/ness3/src/ness3"
-	"github.com/ness-network/ness3/src/util/logging"
+	"github.com/MDLlife/MDL/src/readable"
+	"github.com/MDLlife/MDL/src/mdl"
+	"github.com/MDLlife/MDL/src/util/logging"
 )
 
 var (
@@ -68,7 +68,7 @@ var (
 		DefaultConnections:             DefaultConnections,
 		PeerListURL:                    "http://nodes.privateness.network/blockchain/peers.txt",
 		Port:                           6660,
-		WebInterfacePort:               8330,
+		WebInterfacePort:               6420,
 		DataDirectory:                  "$HOME/.ness3",
 	})
 
