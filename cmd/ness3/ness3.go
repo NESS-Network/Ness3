@@ -1,5 +1,5 @@
 /*
-daemon
+ness-daemon
 */
 package main
 

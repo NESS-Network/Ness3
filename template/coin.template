@@ -1,5 +1,5 @@
 /*
-ness daemon
+ness-daemon
 */
 package main
 
@@ -14,7 +14,7 @@ import (
 	"os"
 
 	"github.com/MDLlife/MDL/src/readable"
-	"github.com/MDLlife/MDL/src/ness3"
+	"github.com/MDLlife/MDL/src/mdl"
 	"github.com/MDLlife/MDL/src/util/logging"
 )
 

@@ -11,7 +11,7 @@
 .PHONY: generate update-golden-files
 .PHONY: fuzz-base58 fuzz-encoder
 
-COIN ?= ness3
+COIN ?=ness3
 WALLET_DIR=/root/.ness3/wallets
 WALLET_NAME=ness_cli.wlt
 DATA_DIR=/root/.ness3
