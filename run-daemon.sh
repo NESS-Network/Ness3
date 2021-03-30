@@ -18,8 +18,11 @@ go run -ldflags "${GOLDFLAGS}" $GORUNFLAGS cmd/ness3/ness3.go \
     -gui-dir="${DIR}/src/gui/static/" \
     -max-default-peer-outgoing-connections=7 \
     -launch-browser=false \
+<<<<<<< HEAD
     -enable-all-api-sets=true \
     -enable-gui=false \
+=======
+>>>>>>> release/0.27.1
     -log-level=debug \
     $@
 
