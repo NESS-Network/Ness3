@@ -17,12 +17,10 @@ export USER_BURN_FACTOR=5
 go run -ldflags "${GOLDFLAGS}" $GORUNFLAGS cmd/ness3/ness3.go \
     -gui-dir="${DIR}/src/gui/static/" \
     -max-default-peer-outgoing-connections=7 \
-    -launch-browser=true \
+    -launch-browser=false \
     -enable-all-api-sets=true \
     -enable-gui=false \
     -log-level=debug \
-    -disable-csrf \
-    -disable-csp \
     $@
 
 popd >/dev/null
