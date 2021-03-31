@@ -6,11 +6,12 @@
 }
 
 .large-header {
-  background: $gradient-blue-dark; /* For browsers that do not support gradients */
-  background: -webkit-linear-gradient(left top, $gradient-blue-dark-transparent, $gradient-blue-light-transparent), url('../../../../assets/img/back.png') center center no-repeat; /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(bottom right, $gradient-blue-dark-transparent, $gradient-blue-light-transparent), url('../../../../assets/img/back.png') center center no-repeat; /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(bottom right, $gradient-blue-dark-transparent, $gradient-blue-light-transparent), url('../../../../assets/img/back.png') center center no-repeat; /* For Firefox 3.6 to 15 */
-  background: linear-gradient(to bottom right, $gradient-blue-dark-transparent, $gradient-blue-light-transparent), url('../../../../assets/img/back.png') center center no-repeat; /* Standard syntax */
+  background: url('../../../../assets/img/back.png') center center no-repeat;
+  // background: $gradient-blue-dark; /* For browsers that do not support gradients */
+  // background:  url('../../../../assets/img/back.png') center center no-repeat; /* For Safari 5.1 to 6.0 */
+  // background: -o-linear-gradient(bottom right, $gradient-blue-dark-transparent, $gradient-blue-light-transparent), url('../../../../assets/img/back.png') center center no-repeat; /* For Opera 11.1 to 12.0 */
+  // background: -moz-linear-gradient(bottom right, $gradient-blue-dark-transparent, $gradient-blue-light-transparent), url('../../../../assets/img/back.png') center center no-repeat; /* For Firefox 3.6 to 15 */
+  // background: linear-gradient(to bottom right, $gradient-blue-dark-transparent, $gradient-blue-light-transparent), url('../../../../assets/img/back.png') center center no-repeat; /* Standard syntax */
   background-size: 100% auto;
   display: flex;
   flex-flow: column;
@@ -50,7 +51,7 @@
   p {
     background-color: rgba(255, 255, 255, 0.3);
     border-radius: 15px;
-    color: $black;
+    color: $white;
     display: inline-block;
     font-size: 12px;
     line-height: 22px;

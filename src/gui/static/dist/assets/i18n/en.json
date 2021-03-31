@@ -1,6 +1,6 @@
 {
   "common": {
-    "coin-id": "MDL",
+    "coin-id": "NESS",
     "coin-hours": "Token Hours",
     "usd": "USD",
     "loading": "Loading...",
@@ -24,14 +24,14 @@
     "wallets": "Wallets",
     "send": "Send",
     "history": "History",
-    "buy-coin": "Get MDL",
+    "buy-coin": "Get NESS",
     "network": "Networking",
     "blockchain": "Blockchain",
     "outputs": "Outputs",
     "transactions": "Transactions",
     "pending-txs": "Pending Transactions",
     "backup": "Backup Wallet",
-    "explorer": "MDL Explorer",
+    "explorer": "NESS Explorer",
     "seed": "Wallet Seed",
     "qrcode": "QR Code",
     "reset": "Reset Password",
@@ -71,21 +71,21 @@
     "select-address": "Select address",
     "generate": "Generate",
     "deposit-location": "Deposit Location",
-    "deposit-location-desc": "Choose a wallet where you'd like us to deposit your MDL after we receive your Selected Coin.",
+    "deposit-location-desc": "Choose a wallet where you'd like us to deposit your NESS after we receive your Selected Coin.",
     "make-choice": "Make a choice",
-    "wallets-desc": "Each time a new wallet and address are selected, a new Selected Coin address is generated. A single MDL address can have up to 5 Selected Coin addresses assigned to it.",
+    "wallets-desc": "Each time a new wallet and address are selected, a new Selected Coin address is generated. A single NESS address can have up to 5 Selected Coin addresses assigned to it.",
     "send": "Send Selected Coin",
-    "send-desc": "Send Selected Coin to the address below. Once received, we will deposit the MDL to a new address in the wallet selected above at the current rate of {{ rate }} MDL/Selected Coin.",
-    "fraction-warning": "Only send multiple of the MDL/BTC rate! MDL is sent in whole number; fractional MDL is not sent!",
-    "receive": "Receive MDL",
-    "receive-desc": "After receiving your Selected Coin, we'll send you your MDL. It may take anywhere between 20 minutes and an hour to receive your MDL.",
+    "send-desc": "Send Selected Coin to the address below. Once received, we will deposit the NESS to a new address in the wallet selected above at the current rate of {{ rate }} NESS/Selected Coin.",
+    "fraction-warning": "Only send multiple of the NESS/BTC rate! NESS is sent in whole number; fractional NESS is not sent!",
+    "receive": "Receive NESS",
+    "receive-desc": "After receiving your Selected Coin, we'll send you your NESS. It may take anywhere between 20 minutes and an hour to receive your NESS.",
     "status-button": "Status:",
     "check-status-button": "Check Status",
     "new-order-button": "New Order"
   },
 
   "wizard": {
-    "wallet-desc": "If you don't have a MDL wallet, use the generated seed to create a new one. If you already have a wallet, toggle over to \"Load Wallet\" and enter your seed.",
+    "wallet-desc": "If you don't have a NESS wallet, use the generated seed to create a new one. If you already have a wallet, toggle over to \"Load Wallet\" and enter your seed.",
     "encrypt-desc": "Increase security of your wallet by encrypting it. By entering a password below, your wallet will be encrypted. Only those with the password will be able access the wallet and remove funds.",
     "hardware-wallet-link": "Using a hardware wallet?",
     "finish-button": "Finish",
@@ -93,7 +93,7 @@
 
     "confirm": {
       "title": "Safeguard your seed!",
-      "desc": "We want to make sure that you wrote down your seed and stored it in a safe place. If you forget your seed, you WILL NOT be able to recover your MDL wallet!",
+      "desc": "We want to make sure that you wrote down your seed and stored it in a safe place. If you forget your seed, you WILL NOT be able to recover your NESS wallet!",
       "checkbox": "It’s safe, I swear.",
       "button": "Continue"
     }
@@ -250,8 +250,8 @@
     "blocks": "Number of blocks",
     "time": "Timestamp of last block",
     "hash": "Hash of last block",
-    "current-supply": "Current MDL supply",
-    "total-supply": "Total MDL supply",
+    "current-supply": "Current NESS supply",
+    "total-supply": "Total NESS supply",
     "current-coinhour-supply": "Current Token Hours supply",
     "total-coinhour-supply": "Total Token Hours supply"
   },
@@ -302,7 +302,7 @@
     "done": "Completed",
     "waiting-confirm": "Waiting for confirmation",
     "waiting-deposit": "Waiting for deposit",
-    "waiting-send": "Waiting to send MDL",
+    "waiting-send": "Waiting to send NESS",
     "unknown": "Unknown"
   },
 

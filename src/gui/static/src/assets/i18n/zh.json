@@ -1,6 +1,6 @@
 {
   "common": {
-    "coin-id": "MDL",
+    "coin-id": "NESS",
     "coin-hours": "币时",
     "usd": "美元",
     "loading": "加载中...",
@@ -24,14 +24,14 @@
     "wallets": "钱包",
     "send": "发送",
     "history": "历史",
-    "buy-coin": "买 MDL",
+    "buy-coin": "买 NESS",
     "network": "网络",
     "blockchain": "区块链",
     "outputs": "未交易输出",
     "transactions": "交易",
     "pending-txs": "待处理交易",
     "backup": "备份钱包",
-    "explorer": "MDL Explorer",
+    "explorer": "NESS Explorer",
     "seed": "钱包种子",
     "qrcode": "QR代码",
     "reset": "重置密码",
@@ -71,21 +71,21 @@
     "select-address": "选择地址",
     "generate": "生成",
     "deposit-location": "充值位置",
-    "deposit-location-desc": "选择一个钱包，以在我们收到你的比特币后充值MDL到该钱包",
+    "deposit-location-desc": "选择一个钱包，以在我们收到你的比特币后充值NESS到该钱包",
     "make-choice": "做选择",
-    "wallets-desc": "每当选择一个新的钱包和地址，一个新的BTC地址将会生成。一个独立的MDL地址最多可绑定5个BTC地址。",
+    "wallets-desc": "每当选择一个新的钱包和地址，一个新的BTC地址将会生成。一个独立的NESS地址最多可绑定5个BTC地址。",
     "send": "发送Bitcoin",
-    "send-desc": "发送Bitcoin至如下地址。一旦收到，我们将会按当前汇率: {{ rate }} MDL/BTC充值MDL到选中钱包的一个新地址。",
-    "fraction-warning": "请按MDL/BTC汇率的倍数发送BTC! MDL是以整数发送; MDL的小数位将不会发送",
-    "receive": "接收MDL",
-    "receive-desc": "收到你的比特币后，我们将发送MDL给你。你可能需要20分钟到一个小时才能收到这些MDL。",
+    "send-desc": "发送Bitcoin至如下地址。一旦收到，我们将会按当前汇率: {{ rate }} NESS/BTC充值NESS到选中钱包的一个新地址。",
+    "fraction-warning": "请按NESS/BTC汇率的倍数发送BTC! NESS是以整数发送; NESS的小数位将不会发送",
+    "receive": "接收NESS",
+    "receive-desc": "收到你的比特币后，我们将发送NESS给你。你可能需要20分钟到一个小时才能收到这些NESS。",
     "status-button": "状态:",
     "check-status-button": "查看状态",
     "new-order-button": "新订单"
   },
 
   "wizard": {
-    "wallet-desc": "如果你没有MDL钱包，请使用生成的种子来创建一个新钱包。如果你已经有一个钱包，切换到\"加载钱包\"并输入你的种子。",
+    "wallet-desc": "如果你没有NESS钱包，请使用生成的种子来创建一个新钱包。如果你已经有一个钱包，切换到\"加载钱包\"并输入你的种子。",
     "encrypt-desc": "通过加密来增加钱包的安全性。输入密码后，你的钱包会被加密。只有输入密码才可以访问的钱包或移动资金。",
     "hardware-wallet-link": "使用硬件钱包？",
     "finish-button": "完成",
@@ -93,7 +93,7 @@
 
     "confirm": {
       "title": "保护你的种子!",
-      "desc": "请确保你已经写下你的种子并将它储存在了一个安全的地方。如果你忘记了种子，你将无法恢复你的MDL钱包",
+      "desc": "请确保你已经写下你的种子并将它储存在了一个安全的地方。如果你忘记了种子，你将无法恢复你的NESS钱包",
       "checkbox": "它很安全，我发誓。",
       "button": "继续"
     }
@@ -250,8 +250,8 @@
     "blocks": "区块数量",
     "time": "上一个区块的时间戳",
     "hash": "上一个区块的哈希值",
-    "current-supply": "目前MDL供应量",
-    "total-supply": "MDL的总供应量",
+    "current-supply": "目前NESS供应量",
+    "total-supply": "NESS的总供应量",
     "current-coinhour-supply": "目前币时供应量",
     "total-coinhour-supply": "币时总供应量"
   },
@@ -302,7 +302,7 @@
     "done": "完成",
     "waiting-confirm": "等待确认",
     "waiting-deposit": "等待比特币充值",
-    "waiting-send": "等待发送MDL",
+    "waiting-send": "等待发送NESS",
     "unknown": "未知"
   },
 
