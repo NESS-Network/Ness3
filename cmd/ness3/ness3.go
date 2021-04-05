@@ -10,7 +10,7 @@ AVOID EDITING THIS MANUALLY
 
 import (
 	"flag"
-	_ "net/http/pprof"
+    "github.com/MDLlife/MDL/src/fiber"
 	"os"
 
 	"github.com/MDLlife/MDL/src/readable"
@@ -20,7 +20,11 @@ import (
 
 var (
 	// Version of the node. Can be set by -ldflags
+<<<<<<< HEAD:cmd/ness3/ness3.go
 	Version = "0.27.1"
+=======
+    Version = "0.27.1"
+>>>>>>> release/0.27.1:cmd/mdl/mdl.go
 	// Commit ID. Can be set by -ldflags
 	Commit = ""
 	// Branch name. Can be set by -ldflags
@@ -57,6 +61,7 @@ var (
 		"94.23.56.111:6660",
 	}
 
+<<<<<<< HEAD:cmd/ness3/ness3.go
 	nodeConfig = mdl.NewNodeConfig(ConfigMode, mdl.NodeParameters{
 		CoinName:                       CoinName,
 		GenesisSignatureStr:            GenesisSignatureStr,
@@ -70,6 +75,38 @@ var (
 		Port:                           6660,
 		WebInterfacePort:               6420,
 		DataDirectory:                  "$HOME/.ness3",
+=======
+	nodeConfig = mdl.NewNodeConfig(ConfigMode, fiber.NodeConfig{
+		CoinName:            CoinName,
+		GenesisSignatureStr: GenesisSignatureStr,
+		GenesisAddressStr:   GenesisAddressStr,
+		GenesisCoinVolume:   GenesisCoinVolume,
+		GenesisTimestamp:    GenesisTimestamp,
+		BlockchainPubkeyStr: BlockchainPubkeyStr,
+		BlockchainSeckeyStr: BlockchainSeckeyStr,
+		DefaultConnections:  DefaultConnections,
+		PeerListURL:         "",
+		Port:                7800,
+		WebInterfacePort:    8320,
+		DataDirectory:       "$HOME/.mdl",
+
+        UnconfirmedBurnFactor:          10,
+        UnconfirmedMaxTransactionSize:  32768,
+        UnconfirmedMaxDropletPrecision: 3,
+        CreateBlockBurnFactor:          10,
+        CreateBlockMaxTransactionSize:  32768,
+        CreateBlockMaxDropletPrecision: 3,
+        MaxBlockTransactionsSize:       32768,
+
+        DisplayName:           "MDL Talent Hub",
+        Ticker:                "MDL",
+        CoinHoursName:         "Talent Hours",
+        CoinHoursNameSingular: "Talent Hour",
+        CoinHoursTicker:       "MTH",
+        ExplorerURL:           "https://explorer.mdl.wtf",
+        VersionURL:            "https://api.github.com/repos/MDLlife/MDL/tags",
+        Bip44Coin:             8000,
+>>>>>>> release/0.27.1:cmd/mdl/mdl.go
 	})
 
 	parseFlags = true
